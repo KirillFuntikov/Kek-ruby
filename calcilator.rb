@@ -1,48 +1,46 @@
 #Калькулятор
 #Весьма самодекларируемый код функций 
-def Plus(int1, int2)
-	answer = int1.to_i + int2.to_i
-	return answer
+def plus(int1, int2)
+  answer = int1.to_i + int2.to_i
+  answer
 end
 
-def Minus(int1, int2)
-	return int1.to_i - int2.to_i
+def minus(int1, int2)
+  int1.to_i - int2.to_i
 end
 
-def Multiplication(int1, int2)
-	return int1.to_i * int2.to_i
+def multiplication(int1, int2)
+  int1.to_i * int2.to_i
 end
 
-def Division(int1, int2)
-	if int2.to_i == 0
-		return "Нельзя делить на тебя"
-	end
-	return int1.to_i/int2.to_i
+def division(int1, int2)
+  return "Нельзя делить на тебя" if int2.to_i == 0
+  int1.to_i/int2.to_i
 end
 
 
 # def Choise(int1, int2)
-# 	puts "1- +  3- * \n2- -  4- /"
-# 	number = gets
-# 	case number
-# 	when 1
-# 		answer = Plus(int1, int2)
-# 		puts "Аааатветик: #{answer}"
-# 	end
-# 	when 2
-# 		answer = Minus(int1, int2)
-# 		puts "Результатик: #{answer}"
-# 	when 3
-# 		answer = Multiplication(int1, int2)
-# 		puts "Умножил: #{answer}"
-# 	when 4
-# 		answer = Division(int1, int2)
-# 		puts "Что тут у нас?: #{answer}"
-# 	when String 
-# 		puts "Невозможный вариант, но пусть будет"
-# 	else 
-# 		puts "От 1 до 4, овощ!"
-# 	end
+#   puts "1- +  3- * \n2- -  4- /"
+#   number = gets
+#   case number
+#   when 1
+#     answer = Plus(int1, int2)
+#     puts "Аааатветик: #{answer}"
+#   end
+#   when 2
+#     answer = Minus(int1, int2)
+#     puts "Результатик: #{answer}"
+#   when 3
+#     answer = Multiplication(int1, int2)
+#     puts "Умножил: #{answer}"
+#   when 4
+#     answer = Division(int1, int2)
+#     puts "Что тут у нас?: #{answer}"
+#   when String 
+#     puts "Невозможный вариант, но пусть будет"
+#   else 
+#     puts "От 1 до 4, овощ!"
+#   end
 # end
 
 #Магия начинается тут!!
@@ -59,25 +57,25 @@ int2 = gets
 puts "А теперь выбирай что с ними сделать:"
 
 puts "1- +  3- * \n2- -  4- /"
-	number = gets
-	case number.to_i
-	when 1
-		answer = Plus(int1, int2)
-		puts "Аааатветик: #{answer}"
-	when 2
-		answer = Minus(int1, int2)
-		puts "Результатик: #{answer}"
-	when 3
-		answer = Multiplication(int1, int2)
-		puts "Умножил: #{answer}"
-	when 4
-		answer = Division(int1, int2)
-		puts "Что тут у нас?: #{answer}"
-	when String 
-		puts "Невозможный вариант, но пусть будет"
-	else 
-		puts "От 1 до 4, овощ!"
-	end
+number = gets
+case number.to_i
+when 1
+  answer = Plus(int1, int2)
+  puts "Аааатветик: #{answer}"
+when 2
+  answer = Minus(int1, int2)
+  puts "Результатик: #{answer}"
+when 3
+  answer = Multiplication(int1, int2)
+  puts "Умножил: #{answer}"
+when 4
+  answer = Division(int1, int2)
+  puts "Что тут у нас?: #{answer}"
+when String 
+  puts "Невозможный вариант, но пусть будет"
+else 
+  puts "От 1 до 4, овощ!"
+end
 
 puts 'Ещё разок? "Yes" если понравилось...'
 omt = gets
