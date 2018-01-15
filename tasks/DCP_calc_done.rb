@@ -4,9 +4,11 @@ def plus(int1, int2)
   answer = int1.to_i + int2.to_i
   answer
 end
+
 def minus(int1, int2)
   int1.to_i - int2.to_i
 end
+
 def multiplication(int1, int2)
   int1.to_i * int2.to_i
 end
@@ -14,6 +16,7 @@ def division(int1, int2)
   return 'Нельзя делить на тебя' if int2.to_i.zero?
   int1.to_i / int2.to_i
 end
+
 def choise(number, int1, int2)
   case number.to_i
   when 1
@@ -28,7 +31,6 @@ def choise(number, int1, int2)
   when 4
     answer = division(int1, int2)
     puts "Что тут у нас?: #{answer}"
-  when String then puts 'Невозможный вариант, но пусть будет'
   else puts 'От 1 до 4, овощ!'
   end
 end
