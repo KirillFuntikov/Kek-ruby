@@ -12,6 +12,7 @@ end
 def multiplication(int1, int2)
   int1.to_i * int2.to_i
 end
+
 def division(int1, int2)
   return 'Нельзя делить на тебя' if int2.to_i.zero?
   int1.to_i / int2.to_i
