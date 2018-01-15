@@ -18,16 +18,7 @@ def division(int1, int2)
   int1.to_i / int2.to_i
 end
 
-# Magic begins here
-puts 'Вазап, таких калькуляторов ты ещё не видел!'
-
-loop do
-  puts 'Вводи сначала первое, потом второе число:'
-  int1 = gets
-  int2 = gets
-  puts 'А теперь выбирай что с ними сделать:'
-  puts "1- +  3- * \n2- -  4- /"
-  number = gets
+def choise(number, int1, int2)
   case number.to_i
   when 1
     answer = plus(int1, int2)
@@ -41,15 +32,23 @@ loop do
   when 4
     answer = division(int1, int2)
     puts "Что тут у нас?: #{answer}"
-  when String 
-    puts 'Невозможный вариант, но пусть будет'
-  else 
-    puts 'От 1 до 4, овощ!'
+  when String then puts 'Невозможный вариант, но пусть будет'
+  else puts 'От 1 до 4, овощ!'
   end
-
+end
+# Magic begins here
+puts 'Вазап, таких калькуляторов ты ещё не видел!'
+loop do
+  puts 'Вводи сначала первое, потом второе число:'
+  int1 = gets
+  int2 = gets
+  puts 'А теперь выбирай что с ними сделать:'
+  puts "1- +  3- * \n2- -  4- /"
+  number = gets
+  choise(number, int1, int2)
   puts 'Ещё разок? "Yes" если понравилось...'
   omt = gets
   omt.downcase!
   omt.chomp!
-  break if omt == 'yes'
+  break if omt == "yes"
 end
